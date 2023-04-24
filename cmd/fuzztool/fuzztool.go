@@ -27,8 +27,8 @@ import (
 	"github.com/alecthomas/kong"
 	"go.uber.org/zap"
 
-	"github.com/FerretDB/FerretDB/internal/util/lazyerrors"
-	"github.com/FerretDB/FerretDB/internal/util/logging"
+	"github.com/FerretDB/FerretDB/pkg/util/lazyerrors"
+	"github.com/FerretDB/FerretDB/pkg/util/logging"
 )
 
 // generatedCorpus returns $GOCACHE/fuzz/github.com/FerretDB/FerretDB,

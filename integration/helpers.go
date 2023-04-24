@@ -28,8 +28,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/FerretDB/FerretDB/internal/types"
-	"github.com/FerretDB/FerretDB/internal/util/testutil"
+	"github.com/FerretDB/FerretDB/pkg/types"
+	"github.com/FerretDB/FerretDB/pkg/util/testutil"
 )
 
 //go:generate ../bin/stringer  -type compatTestCaseResultType

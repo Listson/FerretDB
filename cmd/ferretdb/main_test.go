@@ -24,7 +24,7 @@ import (
 	"github.com/alecthomas/kong"
 	"golang.org/x/exp/slices"
 
-	"github.com/FerretDB/FerretDB/internal/util/must"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
 )
 
 // TestCover allows us to run FerretDB with coverage enabled.

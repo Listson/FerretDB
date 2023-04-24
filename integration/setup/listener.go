@@ -29,10 +29,10 @@ import (
 	"go.opentelemetry.io/otel"
 	"go.uber.org/zap"
 
-	"github.com/FerretDB/FerretDB/internal/clientconn"
-	"github.com/FerretDB/FerretDB/internal/clientconn/connmetrics"
-	"github.com/FerretDB/FerretDB/internal/handlers/registry"
-	"github.com/FerretDB/FerretDB/internal/util/state"
+	"github.com/FerretDB/FerretDB/pkg/clientconn"
+	"github.com/FerretDB/FerretDB/pkg/clientconn/connmetrics"
+	"github.com/FerretDB/FerretDB/pkg/handlers/registry"
+	"github.com/FerretDB/FerretDB/pkg/util/state"
 )
 
 // See docker-compose.yml.

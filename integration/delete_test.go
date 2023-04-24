@@ -24,7 +24,7 @@ import (
 
 	"github.com/FerretDB/FerretDB/integration/setup"
 	"github.com/FerretDB/FerretDB/integration/shareddata"
-	"github.com/FerretDB/FerretDB/internal/handlers/commonerrors"
+	"github.com/FerretDB/FerretDB/pkg/handlers/commonerrors"
 )
 
 // TestDeleteSimple checks simple cases of doc deletion.

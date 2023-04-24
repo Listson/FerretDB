@@ -28,7 +28,7 @@ import (
 
 	"github.com/FerretDB/FerretDB/ferretdb"
 	"github.com/FerretDB/FerretDB/integration/setup"
-	"github.com/FerretDB/FerretDB/internal/util/testutil"
+	"github.com/FerretDB/FerretDB/pkg/util/testutil"
 )
 
 func TestEmbedded(t *testing.T) {

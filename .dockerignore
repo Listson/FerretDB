@@ -3,7 +3,7 @@
 # Go code
 !build/version
 !cmd
-!internal
+!pkg
 !go.mod
 !go.sum
 

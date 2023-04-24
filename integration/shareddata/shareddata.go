@@ -22,8 +22,8 @@ import (
 	"golang.org/x/exp/maps"
 	"golang.org/x/exp/slices"
 
-	"github.com/FerretDB/FerretDB/internal/util/iterator"
-	"github.com/FerretDB/FerretDB/internal/util/must"
+	"github.com/FerretDB/FerretDB/pkg/util/iterator"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
 )
 
 // unset represents a field that should not be set.

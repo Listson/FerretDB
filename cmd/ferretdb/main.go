@@ -34,13 +34,13 @@ import (
 	"golang.org/x/exp/slices"
 
 	"github.com/FerretDB/FerretDB/build/version"
-	"github.com/FerretDB/FerretDB/internal/clientconn"
-	"github.com/FerretDB/FerretDB/internal/clientconn/connmetrics"
-	"github.com/FerretDB/FerretDB/internal/handlers/registry"
-	"github.com/FerretDB/FerretDB/internal/util/debug"
-	"github.com/FerretDB/FerretDB/internal/util/logging"
-	"github.com/FerretDB/FerretDB/internal/util/state"
-	"github.com/FerretDB/FerretDB/internal/util/telemetry"
+	"github.com/FerretDB/FerretDB/pkg/clientconn"
+	"github.com/FerretDB/FerretDB/pkg/clientconn/connmetrics"
+	"github.com/FerretDB/FerretDB/pkg/handlers/registry"
+	"github.com/FerretDB/FerretDB/pkg/util/debug"
+	"github.com/FerretDB/FerretDB/pkg/util/logging"
+	"github.com/FerretDB/FerretDB/pkg/util/state"
+	"github.com/FerretDB/FerretDB/pkg/util/telemetry"
 )
 
 // The cli struct represents all command-line commands, fields and flags.

@@ -29,7 +29,7 @@ import (
 	"go.uber.org/zap"
 
 	"github.com/FerretDB/FerretDB/integration/shareddata"
-	"github.com/FerretDB/FerretDB/internal/util/testutil"
+	"github.com/FerretDB/FerretDB/pkg/util/testutil"
 )
 
 // SetupCompatOpts represents setup options for compatibility test.

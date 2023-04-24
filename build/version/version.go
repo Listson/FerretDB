@@ -57,9 +57,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/FerretDB/FerretDB/internal/types"
-	"github.com/FerretDB/FerretDB/internal/util/debugbuild"
-	"github.com/FerretDB/FerretDB/internal/util/must"
+	"github.com/FerretDB/FerretDB/pkg/types"
+	"github.com/FerretDB/FerretDB/pkg/util/debugbuild"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
 )
 
 // Each pattern in a //go:embed line must match at least one file or non-empty directory,

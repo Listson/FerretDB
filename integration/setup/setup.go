@@ -33,8 +33,8 @@ import (
 	"golang.org/x/exp/slices"
 
 	"github.com/FerretDB/FerretDB/integration/shareddata"
-	"github.com/FerretDB/FerretDB/internal/util/iterator"
-	"github.com/FerretDB/FerretDB/internal/util/testutil"
+	"github.com/FerretDB/FerretDB/pkg/util/iterator"
+	"github.com/FerretDB/FerretDB/pkg/util/testutil"
 )
 
 // Flags.

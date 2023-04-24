@@ -24,7 +24,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/FerretDB/FerretDB/internal/util/must"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
 )
 
 // runGit runs `git` with given arguments and returns stdout.

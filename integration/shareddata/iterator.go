@@ -24,8 +24,8 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 
-	"github.com/FerretDB/FerretDB/internal/util/iterator"
-	"github.com/FerretDB/FerretDB/internal/util/resource"
+	"github.com/FerretDB/FerretDB/pkg/util/iterator"
+	"github.com/FerretDB/FerretDB/pkg/util/resource"
 )
 
 // newValuesIterator creates iterator that iterates through bson.D documents generated

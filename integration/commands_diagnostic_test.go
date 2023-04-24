@@ -27,9 +27,9 @@ import (
 
 	"github.com/FerretDB/FerretDB/integration/setup"
 	"github.com/FerretDB/FerretDB/integration/shareddata"
-	"github.com/FerretDB/FerretDB/internal/types"
-	"github.com/FerretDB/FerretDB/internal/util/must"
-	"github.com/FerretDB/FerretDB/internal/util/testutil"
+	"github.com/FerretDB/FerretDB/pkg/types"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
+	"github.com/FerretDB/FerretDB/pkg/util/testutil"
 )
 
 func TestCommandsDiagnosticConnectionStatus(t *testing.T) {

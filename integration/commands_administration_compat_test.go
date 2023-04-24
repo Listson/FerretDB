@@ -26,7 +26,7 @@ import (
 
 	"github.com/FerretDB/FerretDB/integration/setup"
 	"github.com/FerretDB/FerretDB/integration/shareddata"
-	"github.com/FerretDB/FerretDB/internal/util/must"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
 )
 
 func TestCommandsAdministrationCompatCollStatsWithScale(t *testing.T) {

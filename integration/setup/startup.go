@@ -28,9 +28,9 @@ import (
 	"go.uber.org/zap"
 	"golang.org/x/exp/slices"
 
-	"github.com/FerretDB/FerretDB/internal/util/debug"
-	"github.com/FerretDB/FerretDB/internal/util/logging"
-	"github.com/FerretDB/FerretDB/internal/util/must"
+	"github.com/FerretDB/FerretDB/pkg/util/debug"
+	"github.com/FerretDB/FerretDB/pkg/util/logging"
+	"github.com/FerretDB/FerretDB/pkg/util/must"
 )
 
 var jaegerExporter *jaeger.Exporter

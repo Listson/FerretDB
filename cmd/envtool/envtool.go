@@ -38,12 +38,12 @@ import (
 	"go.uber.org/zap"
 
 	"github.com/FerretDB/FerretDB/build/version"
-	"github.com/FerretDB/FerretDB/internal/handlers/pg/pgdb"
-	"github.com/FerretDB/FerretDB/internal/handlers/tigris/tigrisdb"
-	"github.com/FerretDB/FerretDB/internal/util/ctxutil"
-	"github.com/FerretDB/FerretDB/internal/util/debug"
-	"github.com/FerretDB/FerretDB/internal/util/logging"
-	"github.com/FerretDB/FerretDB/internal/util/state"
+	"github.com/FerretDB/FerretDB/pkg/handlers/pg/pgdb"
+	"github.com/FerretDB/FerretDB/pkg/handlers/tigris/tigrisdb"
+	"github.com/FerretDB/FerretDB/pkg/util/ctxutil"
+	"github.com/FerretDB/FerretDB/pkg/util/debug"
+	"github.com/FerretDB/FerretDB/pkg/util/logging"
+	"github.com/FerretDB/FerretDB/pkg/util/state"
 )
 
 var (
