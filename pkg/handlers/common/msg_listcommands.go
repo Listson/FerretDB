@@ -42,6 +42,10 @@ type command struct {
 // Please keep help text in sync with handlers.Interface methods documentation.
 var Commands = map[string]command{
 	// sorted alphabetically
+	"abortTransaction": {
+		Help:    "commit transaction",
+		Handler: handlers.Interface.MsgAbortTransaction,
+	},
 	"aggregate": {
 		Help:    "Returns aggregated data.",
 		Handler: handlers.Interface.MsgAggregate,
@@ -60,6 +64,10 @@ var Commands = map[string]command{
 	"collStats": {
 		Help:    "Returns storage data for a collection.",
 		Handler: handlers.Interface.MsgCollStats,
+	},
+	"commitTransaction": {
+		Help:    "commit transaction",
+		Handler: handlers.Interface.MsgCommitTransaction,
 	},
 	"connectionStatus": {
 		Help: "Returns information about the current connection, " +
@@ -116,6 +124,10 @@ var Commands = map[string]command{
 	"dropIndexes": {
 		Help:    "Drops indexes on a collection.",
 		Handler: handlers.Interface.MsgDropIndexes,
+	},
+	"endSession": {
+		Help:    "commit transaction",
+		Handler: handlers.Interface.MsgEndSession,
 	},
 	"explain": {
 		Help:    "Returns the execution plan.",

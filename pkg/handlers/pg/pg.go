@@ -27,10 +27,16 @@ import (
 	"github.com/FerretDB/FerretDB/pkg/clientconn/connmetrics"
 	"github.com/FerretDB/FerretDB/pkg/clientconn/cursor"
 	"github.com/FerretDB/FerretDB/pkg/handlers"
+	"github.com/FerretDB/FerretDB/pkg/handlers/commonerrors"
 	"github.com/FerretDB/FerretDB/pkg/handlers/pg/pgdb"
 	"github.com/FerretDB/FerretDB/pkg/util/lazyerrors"
 	"github.com/FerretDB/FerretDB/pkg/util/state"
 )
+
+// notImplemented returns error for stub command handlers.
+func notImplemented(command string) error {
+	return commonerrors.NewCommandErrorMsg(commonerrors.ErrNotImplemented, "I'm a stub, not a real handler for "+command)
+}
 
 // Handler implements handlers.Interface on PostgreSQL.
 type Handler struct {

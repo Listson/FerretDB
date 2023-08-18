@@ -41,6 +41,9 @@ type Interface interface {
 
 	// OP_MSG commands, sorted alphabetically
 
+	// MsgAbortTransaction abort transaction.
+	MsgAbortTransaction(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
+
 	// MsgAggregate returns aggregated data.
 	MsgAggregate(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
 
@@ -52,6 +55,9 @@ type Interface interface {
 
 	// MsgCollStats returns storage data for a collection.
 	MsgCollStats(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
+
+	// MsgCommitTransaction commit transaction.
+	MsgCommitTransaction(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
 
 	// MsgConnectionStatus returns information about the current connection,
 	// specifically the state of authenticated users and their available permissions.
@@ -92,6 +98,9 @@ type Interface interface {
 
 	// MsgDropDatabase drops production database.
 	MsgDropDatabase(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
+
+	// MsgEndSession end session.
+	MsgEndSession(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
 
 	// MsgExplain returns the execution plan.
 	MsgExplain(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
