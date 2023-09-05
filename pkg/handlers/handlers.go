@@ -171,5 +171,8 @@ type Interface interface {
 	// MsgWhatsMyURI returns peer information.
 	MsgWhatsMyURI(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, error)
 
+	// BeforeOpMsgHandler exec before OP_MSG handler.
+	BeforeOpMsgHandler(ctx context.Context, msg *wire.OpMsg) (context.Context, *wire.OpMsg, error)
+
 	// please keep OP_MSG commands sorted alphabetically
 }

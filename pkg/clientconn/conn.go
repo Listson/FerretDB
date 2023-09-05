@@ -518,6 +518,14 @@ func (c *conn) handleOpMsg(ctx context.Context, msg *wire.OpMsg, command string)
 			// TODO move it to route, closer to Prometheus metrics
 			defer trace.StartRegion(ctx, command).End()
 
+			var err error
+			var reply *wire.OpMsg
+			if ctx, reply, err = c.h.BeforeOpMsgHandler(ctx, msg); err != nil {
+				return nil, err
+			} else if reply != nil {
+				return reply, nil
+			}
+
 			return cmd.Handler(c.h, ctx, msg)
 		}
 	}
