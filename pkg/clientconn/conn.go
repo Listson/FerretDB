@@ -520,7 +520,7 @@ func (c *conn) handleOpMsg(ctx context.Context, msg *wire.OpMsg, command string)
 
 			var err error
 			var reply *wire.OpMsg
-			if ctx, reply, err = c.h.BeforeOpMsgHandler(ctx, msg); err != nil {
+			if ctx, reply, err = c.h.BeforeOpMsgHandler(ctx, msg, command); err != nil {
 				return nil, err
 			} else if reply != nil {
 				return reply, nil

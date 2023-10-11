@@ -21,6 +21,6 @@ import (
 )
 
 // BeforeOpMsgHandler exec before OP_MSG handler.
-func (h *Handler) BeforeOpMsgHandler(ctx context.Context, msg *wire.OpMsg) (context.Context, *wire.OpMsg, error) {
+func (h *Handler) BeforeOpMsgHandler(ctx context.Context, msg *wire.OpMsg, command string) (context.Context, *wire.OpMsg, error) {
 	return ctx, nil, nil
 }
