@@ -95,6 +95,8 @@ func fromBSON(v bsontype) any {
 		return types.Timestamp(*v)
 	case *int64Type:
 		return int64(*v)
+	case *decimalType:
+		return types.Decimal(*v)
 	case *CString:
 		panic("CString should not be there")
 	}

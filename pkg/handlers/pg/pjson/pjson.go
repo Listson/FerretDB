@@ -168,6 +168,8 @@ func toPJSON(v any) pjsontype {
 		return pointer.To(timestampType(v))
 	case int64:
 		return pointer.To(int64Type(v))
+	case types.Decimal:
+		return pointer.To(decimalType(v))
 	}
 
 	panic(fmt.Sprintf("not reached: %T", v)) // for go-sumtype to work

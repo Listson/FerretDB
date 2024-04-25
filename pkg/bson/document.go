@@ -292,7 +292,15 @@ func (doc *Document) ReadFrom(r *bufio.Reader) error {
 
 			fields = append(fields, field{key: key, value: int64(v)})
 
-		case tagDBPointer, tagDecimal, tagJavaScript, tagJavaScriptScope, tagMaxKey, tagMinKey, tagSymbol:
+		case tagDecimal:
+			var v decimalType
+			if err := v.ReadFrom(bufr); err != nil {
+				return lazyerrors.Errorf("bson.Document.ReadFrom (Decimal): %w", err)
+			}
+
+			fields = append(fields, field{key: key, value: types.Decimal(v)})
+
+		case tagDBPointer, tagJavaScript, tagJavaScriptScope, tagMaxKey, tagMinKey, tagSymbol:
 			return lazyerrors.Errorf("bson.Document.ReadFrom: unhandled element type %#02x (%s)", t, tag(t))
 		default:
 			return lazyerrors.Errorf("bson.Document.ReadFrom: unhandled element type %#02x (%s)", t, tag(t))
@@ -453,6 +461,15 @@ func (doc Document) MarshalBinary() ([]byte, error) {
 				return nil, lazyerrors.Error(err)
 			}
 			if err := int64Type(elV).WriteTo(bufw); err != nil {
+				return nil, lazyerrors.Error(err)
+			}
+
+		case types.Decimal:
+			bufw.WriteByte(byte(tagDecimal))
+			if err := ename.WriteTo(bufw); err != nil {
+				return nil, lazyerrors.Error(err)
+			}
+			if err := decimalType(elV).WriteTo(bufw); err != nil {
 				return nil, lazyerrors.Error(err)
 			}
 
